@@ -34,6 +34,7 @@ interface RTMToolbarState {
     sectionIsExpanded: boolean;
     statusIsExpanded: boolean;
     solutionIsExpanded: boolean;
+    certificationIsExpanded: boolean;
     filters: RTMToolbarFilters;
     expanded: boolean;
 }
@@ -44,6 +45,19 @@ interface RTMToolbarProps {
 }
 
 class RTMToolbar extends React.PureComponent<RTMToolbarProps, RTMToolbarState> {
+    
+    certificationOptions = [
+        { value: 'DHS-4300a', label: 'DHS-4300a'},
+        { value: 'FedRAMP High', label: 'FedRAMP High'},
+        { value: 'FedRAMP Moderate', label: 'FedRAMP Moderate'},
+        { value: 'FedRAMP Low', label: 'FedRAMP Low'},
+        { value: 'FedRAMP Tailored', label: 'FedRAMP Tailored'},
+        { value: 'FISMA High Impact', label: 'FISMA High Impact'},
+        { value: 'FISMA Moderate Impact', label: 'FISMA Moderate Impact'},
+        { value: 'FISMA Low Impact', label: 'FISMA Low Impact'},
+
+    ];
+    
     sectionOptions = [
         { value: 'AC', label: 'Access Control'},
         { value: 'AT', label: 'Awareness and Training'},
