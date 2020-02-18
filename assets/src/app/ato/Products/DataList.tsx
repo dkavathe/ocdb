@@ -27,6 +27,7 @@ interface RTMToolbarFilters {
     section: string[];
     status: string[];
     solution: string[];
+    certification: string[];    
     search: string[];
 }
 
@@ -55,9 +56,12 @@ class RTMToolbar extends React.PureComponent<RTMToolbarProps, RTMToolbarState> {
         { value: 'FISMA High Impact', label: 'FISMA High Impact'},
         { value: 'FISMA Moderate Impact', label: 'FISMA Moderate Impact'},
         { value: 'FISMA Low Impact', label: 'FISMA Low Impact'},
+        { value: 'ICD 503 H-H-H', label: 'ICD 503 H-H-H'},
+        { value: 'ICD 503 L-L-L', label: 'ICD 503 L-L-L'},
+        { value: 'ICD 503 M-M-M', label: 'ICD 503 M-M-M'},
+        { value: 'FedRAMP Certifications', label: 'FedRAMP Certifications'},
 
     ];
-    
     sectionOptions = [
         { value: 'AC', label: 'Access Control'},
         { value: 'AT', label: 'Awareness and Training'},
